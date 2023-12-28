@@ -58,7 +58,7 @@
                                         <span class="text-secondary text-xs font-weight-bold">{{ $team->created_at }}</span>
                                     </td>
                                     <td class="text-center">
-                                        <form action="{{ route('suppression', $team->id) }}" method="POST">
+                                        <form action="{{ route('suppression_team', $team->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" style="border: none; background:none;"><span>

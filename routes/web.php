@@ -35,7 +35,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::post('/user-profile', [InfoUserController::class, 'store']);
 
 	Route::get('/user-management', [TeamController::class, 'tables'])->name('user-management');
-	Route::delete('/user-management/{id}', 'App\Http\Controllers\TeamController@destroy')->name('suppression');
+	Route::delete('/user-management/{id}', 'App\Http\Controllers\TeamController@destroy')->name('suppression_team');
 	Route::get('/new-team', 'App\Http\Controllers\TeamController@create')->name('new-team');
 	Route::post('/user-management', 'App\Http\Controllers\TeamController@store')->name('teams.store');
 
